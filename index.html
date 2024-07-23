@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="login">
+        <form id="input_form" autocomplete="off">
+            <h1>Faça o login </h1>
+            <input type="text" name="nome" id="email" placeholder="email" autocomplete="off">
+            <input type="password" name="password" id="password" placeholder="password" autocomplete="off">
+            <input type="submit" name="enviar" value="Entrar">
+            <input type="submit" name="enviar" value="Criar Usuario" id="create_user">
+        </form>
+
+        <form id="form_create_user" autocomplete="off">
+            <input type="text" name="nome" id="nome" placeholder="Nome" autocomplete="off">
+            <input type="email" name="nome" id="create_email" placeholder="email" autocomplete="off">
+            <input type="password" name="password" id="create_password" placeholder="password" autocomplete="off">
+            <input type="submit" name="enviar" value="Cadastrar">
+        </form>
+        <div class="container-login">
+            <h1>Você está Logado!</h1>
+            <form class="form_tarefa" autocomplete="off">
+                <textarea placeholder="Digite sua tarefa" name="tarefa" id="tarefa" cols="30" rows="3" autocomplete="off"></textarea>
+                <input type="datetime-local" name="datetime" id="dia_hora" autocomplete="off">
+                <input type="submit" name="acao" value="Criar Tarefa" id="btn_criar_tarefa">
+            </form>
+            <input type="submit" name="sair" value="Sair" id="sair">
+            <div class="tarefas-usuario">
+                <h3>Listagem de tarefas atuais:</h3>
+                <ul id="tarefas"></ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
